@@ -1,0 +1,32 @@
+@import 'main';
+.general-wrapper {
+  position: relative;
+  .home {
+    &__wrapper {
+      position: absolute;
+      top: 25px;
+      left: 70px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      color: var(--color-grey-27);
+    }
+    &__button {
+      padding: 3px;
+      padding-right: 25px;
+      border-right: 2px solid var(--color-grey-27);
+      cursor: pointer;
+    }
+    &__img {
+      width: 28px;
+      height: 23px;
+    }
+    &__text {
+      padding-left: 25px;
+      font-family: var(--MyriadPro);
+      font-size: 20px;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+    }
+  }
+}

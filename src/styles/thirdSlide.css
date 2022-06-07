@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "DINPro";
+  font-style: normal;
+  font-weight: 400;
+  src: local("DINPro"), url("../../fonts/DINPro.woff2") format("woff2"), url("../../fonts/DINPro.woff") format("woff");
+}
+@font-face {
+  font-family: "MyriadPro";
+  font-style: normal;
+  font-weight: 400;
+  src: local("MyriadPro"), url("../../fonts/MyriadPro.woff2") format("woff2"), url("../../fonts/MyriadPro.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy-Light"), url("../../fonts/Gilroy-Light.woff") format("woff2"), url("../../fonts/Gilroy-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Regular"), url("../../fonts/Gilroy-Regular.woff2") format("woff2"), url("../../fonts/Gilroy-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Gilroy-ExtraBold"), url("../../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../../fonts/Gilroy-ExtraBold.woff") format("woff");
+}
+:root {
+  --DinPro-font: "DINPro", sans-serif;
+  --Gilroy-Light-font: "Gilroy-Light", sans-serif;
+  --Gilroy-Regular-font: "Gilroy-Regular", sans-serif;
+  --Gilroy-ExtraBold-font: "Gilroy-ExtraBold", sans-serif;
+  --MyriadPro-font: "MyriadPro", sans-serif;
+  --light-font-weight: 300;
+  --normal-font-weight: 400;
+  --extrabold-font-weight: 800;
+  --color-white: #ffffff;
+  --color-pink-ff6: #ff6a9f;
+  --color-pink-ae: #ae4d77;
+  --color-pink-ffa: #ffaac8;
+  --color-pink-fc: #fc6da9;
+  --color-blue-8c: #8cc9e8;
+  --color-grey-27: #272727;
+  --color-grey-24: #242424;
+  --color-grey-17: #171717;
+  --color-black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  padding: 13px 20px;
+  background-color: var(--color-pink-ff6);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.button-reset {
+  background: none;
+  border: 0;
+}
+
+.slide__trird-header {
+  color: var(--color-grey-24);
+  font-size: 28px;
+  font-family: var(--DinPro-font);
+  letter-spacing: 0.15rem;
+}
+.slide__trird-header span {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding: unset;
+}
+
+.third-slide {
+  padding-left: 250px;
+  padding-right: 80px;
+}
+.third-slide .slide__subheader {
+  margin-bottom: 50px;
+  padding-left: 80px;
+  font-family: var(--Gilroy-Regular-font);
+  font-weight: var(--normal-font-weight);
+  font-size: 100px;
+  letter-spacing: 0.8rem;
+}
+.third-slide .slide__subheader span {
+  font-family: var(--Gilroy-ExtraBold-font);
+  font-weight: var(--extrabold-font-weight);
+}
+.third-slide .slide__trird-header {
+  padding-left: 85px;
+  letter-spacing: 0.15rem;
+}
+.third-slide .slide__points {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.third-slide .slide__more {
+  position: absolute;
+  bottom: 140px;
+  right: 100px;
+}
+.third-slide .slide__point {
+  position: relative;
+  padding-top: 50px;
+  font-size: 22px;
+  font-family: var(--DinPro-font);
+  border-radius: 50px;
+  background-color: var(--color-white);
+  box-shadow: 4px 4px 57px 6px rgba(34, 60, 80, 0.2);
+}
+.third-slide .slide__point-img {
+  position: absolute;
+  top: -35px;
+  left: 50px;
+  width: 90px;
+  height: 75px;
+}
+.third-slide .slide__point:first-child {
+  max-width: 360px;
+  padding-left: 75px;
+  padding-bottom: 60px;
+  padding-right: 60px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.third-slide .slide__point:last-child {
+  max-width: 264px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+}
+.third-slide .slide__point:last-child img {
+  left: 30px;
+}
+.third-slide .slide__bottle-img {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  height: 680px;
+  z-index: 10;
+}
+.third-slide .slide-ball {
+  position: absolute;
+}
+.third-slide .slide__yellow-ball {
+  filter: hue-rotate(180deg);
+}
+.third-slide .slide__yellow-ball-top {
+  bottom: 645px;
+  left: 175px;
+  width: 80px;
+  animation: yellowTop 10s ease-in-out infinite;
+}
+@keyframes yellowTop {
+  50% {
+    transform: translate(30px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.third-slide .slide__yellow-ball-top-2 {
+  bottom: 550px;
+  left: 175px;
+  width: 90px;
+  z-index: 11;
+  animation: yellowTop2 7s ease-in-out infinite;
+}
+@keyframes yellowTop2 {
+  50% {
+    transform: translate(-10px, -20px);
+  }
+  80% {
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.third-slide .slide__pink-ball-top {
+  bottom: 510px;
+  left: 75px;
+  width: 50px;
+  z-index: 9;
+  animation: pinkTop 15s ease-in-out infinite;
+}
+@keyframes pinkTop {
+  100% {
+    transform: translate(10px, 20px);
+  }
+}
+.third-slide .slide__pink-ball-top-2 {
+  bottom: 350px;
+  left: 200px;
+  width: 105px;
+  z-index: 9;
+  animation: pinkTop2 10s ease-in-out infinite;
+}
+@keyframes pinkTop2 {
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.third-slide .slide__yellow-ball-bottom {
+  bottom: 280px;
+  left: 10px;
+  width: 40px;
+  z-index: 9;
+  animation: yellowBottom 7s ease-in-out infinite;
+}
+@keyframes yellowBottom {
+  50% {
+    transform: translate(20px, 0);
+  }
+}
+.third-slide .slide__pink-ball-bottom {
+  bottom: 150px;
+  left: 15px;
+  width: 90px;
+  z-index: 11;
+  animation: pinkBottom 10s ease-in-out infinite;
+}
+@keyframes pinkBottom {
+  50% {
+    transform: translate(20px, 10px);
+  }
+}
+.third-slide .slide__yellow-ball-bottom-2 {
+  bottom: 105px;
+  left: 235px;
+  width: 80px;
+  z-index: 9;
+  animation: yellowBottom 15s ease-in-out infinite;
+}
+@keyframes yellowBottom {
+  80% {
+    transform: translate(10px, 0);
+  }
+}
+.third-slide .slide__pink-ball-bottom-2 {
+  bottom: 0px;
+  left: 180px;
+  width: 155px;
+  z-index: 11;
+}
